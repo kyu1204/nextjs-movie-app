@@ -1,10 +1,7 @@
 import styles from "../styles/movie-video.module.css";
-
-import { API_URL } from "../(home)/page";
+import { API_URL } from "./const";
 
 async function getVideos(id: string) {
-  // await new Promise((resolve) => setTimeout(resolve, 3000));
-  // throw new Error("someting broke.");
   const response = await fetch(`${API_URL}/${id}/videos`);
   const json = response.json();
   return json;
